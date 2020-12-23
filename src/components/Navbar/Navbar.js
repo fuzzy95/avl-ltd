@@ -5,13 +5,13 @@ import oldPhone from "@iconify-icons/entypo/old-phone";
 const Navbar = () => {
   return (
     <>
-      <div className="container font-roboto px-14 mx-auto py-8">
+      <div className="container font-roboto px-20 mx-auto py-8">
         <div className="w-full text-xl text-white flex justify-between items-center mb-8">
           <div className="flex items-center space-x-2">
             <Icon icon={oldPhone} />
             <p className="font-bold">+880123456789</p>
           </div>
-          <div className="flex space-x-4 text-2xl">
+          <div className="flex space-x-8 text-2xl">
             <i className="fab fa-facebook-f"></i>
             <i className="fab fa-twitter"></i>
             <i className="fab fa-linkedin-in"></i>
@@ -26,7 +26,7 @@ const Navbar = () => {
               alt=""
             />
           </Link>
-          <nav className="bg-white font-bold text-xl flex flex-wrap justify-center">
+          <nav className="bg-white text-black font-anton tracking-wider text-xl flex flex-wrap justify-center">
             <Link className="mr-5 hover:text-gray-400">Home</Link>
             <Link className="mr-5 hover:text-gray-400">About Us</Link>
             <Link className="mr-5 hover:text-gray-400">Our Factory</Link>

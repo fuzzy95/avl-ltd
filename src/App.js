@@ -7,7 +7,7 @@ const App = () => {
   return (
     <>
       <Router>
-        <div className="bg-green-500">
+        <div className="bg-green-200">
           <Navbar />
           <Switch>
             <Route path="/" exact component={Home} />
