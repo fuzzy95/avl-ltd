@@ -14,7 +14,7 @@ const Review = () => {
     <>
       <div className="text-black bg-yellow skew font-roboto">
         <div className="skewrev container mx-auto lg:px-20 px-4 py-12 mt-20">
-          <h1 className="font-normal uppercase font-anton lg:text-6xl text-4xl lg:text-left text-center">
+          <h1 className="font-semibold uppercase font-oswald lg:text-6xl text-4xl lg:text-left text-center">
             Satisfied <span className="text-white">Customer</span>
           </h1>
           <div className="flex lg:flex-row flex-col lg:justify-evenly lg:-space-y-8 space-y-16 mt-20">

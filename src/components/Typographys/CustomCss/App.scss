@@ -1,0 +1,8 @@
+.bgimage {
+  position: absolute;
+  z-index: -1;
+  background-size: cover;
+  background-position: top;
+  -webkit-clip-clip-path: polygon(0 0, 100% 0%, 100% 75.56%, 0% 67.34%);
+  clip-path: polygon(0 0, 100% 0%, 100% 75.56%, 0% 67.34%);
+}

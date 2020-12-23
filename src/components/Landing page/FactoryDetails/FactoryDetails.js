@@ -1,3 +1,4 @@
+import { useState } from "react";
 import GreenButton from "../../Typographys/Buttons/GreenButton";
 import PrimaryHeader from "../../Typographys/Headers/PrimaryHeader";
 
@@ -8,6 +9,23 @@ const Image = ({ src }) => (
 );
 
 const FactoryDetails = () => {
+  const [open, setOpen] = useState({
+    activeObject: null,
+    objects: [{ id: 1 }, { id: 2 }, { id: 3 }, { id: 4 }, { id: 5 }],
+  });
+
+  const handleOpen = (index) => {
+    setOpen({ ...open, activeObject: open.objects[index] });
+  };
+
+  const openStyles = (index) => {
+    if (open.objects[index] === open.activeObject) {
+      return "2xl:text-base text-xs font-medium cursor-pointer text-yellow";
+    } else {
+      return "2xl:text-base text-xs font-medium cursor-pointer text-black hover:text-yellow";
+    }
+  };
+
   return (
     <>
       <div className="text-black">
@@ -17,24 +35,20 @@ const FactoryDetails = () => {
               <div className="mb-2 lg:self-start self-center">
                 <PrimaryHeader text="FACTORY DETAILS" />
               </div>
-              <div className="w-full border-b-4 border-gray-500 py-4 mb-6">
-                <div className="flex flex-wrap justify-between space-x-4">
-                  <span className="2xl:text-base text-xs font-medium cursor-pointer hover:text-yellow">
-                    ALL
-                  </span>
-                  <span className="2xl:text-base text-xs font-medium cursor-pointer hover:text-yellow">
-                    Machinery Details
-                  </span>
-                  <span className="2xl:text-base text-xs font-medium cursor-pointer hover:text-yellow">
-                    Production Units
-                  </span>
-                  <span className="2xl:text-base text-xs font-medium cursor-pointer hover:text-yellow">
-                    Production Details
-                  </span>
-                  <span className="2xl:text-base text-xs font-medium cursor-pointer hover:text-yellow">
-                    Ancillary Services
-                  </span>
-                </div>
+              <div className="flex justify-between w-full border-b-4 border-gray-500 py-4 mb-6">
+                {open.objects.map((elements, index) => (
+                  <div className="flex flex-wrap justify-between space-x-4">
+                    <span
+                      key={index}
+                      onClick={() => {
+                        handleOpen(index);
+                      }}
+                      className={openStyles(index)}
+                    >
+                      All
+                    </span>
+                  </div>
+                ))}
               </div>
               <div className="flex flex-col 2xl:-space-y-20 space-y-16">
                 <Image src="/img/factory1.jpg" />

@@ -1,8 +1,26 @@
+import { useState } from "react";
 import GreenButton from "../../Typographys/Buttons/GreenButton";
 import PrimaryHeader from "../../Typographys/Headers/PrimaryHeader";
 import SectionImage from "../../Typographys/SectionImage/SectionImage";
 
 const Certifications = () => {
+  const [open, setOpen] = useState({
+    activeObject: null,
+    objects: [{ id: 1 }, { id: 2 }, { id: 3 }, { id: 4 }],
+  });
+
+  const handleOpen = (index) => {
+    setOpen({ ...open, activeObject: open.objects[index] });
+  };
+
+  const openStyles = (index) => {
+    if (open.objects[index] === open.activeObject) {
+      return "2xl:text-base text-xs font-medium cursor-pointer text-white";
+    } else {
+      return "2xl:text-base text-xs font-medium cursor-pointer text-black hover:text-white";
+    }
+  };
+
   return (
     <>
       <div className="text-black bg-yellow skew">
@@ -14,15 +32,19 @@ const Certifications = () => {
               </div>
               <div className="w-full py-4 mb-6">
                 <div className="flex flex-wrap justify-start space-x-4">
-                  <span className="2xl:text-base text-xs font-medium cursor-pointer hover:text-yellow">
-                    ALL
-                  </span>
-                  <span className="2xl:text-base text-xs font-medium cursor-pointer hover:text-yellow">
-                    HR
-                  </span>
-                  <span className="2xl:text-base text-xs font-medium cursor-pointer hover:text-yellow">
-                    CSR
-                  </span>
+                  {open.objects.map((elements, index) => (
+                    <div className="flex flex-wrap justify-between space-x-4">
+                      <span
+                        key={index}
+                        onClick={() => {
+                          handleOpen(index);
+                        }}
+                        className={openStyles(index)}
+                      >
+                        Web Design
+                      </span>
+                    </div>
+                  ))}
                 </div>
               </div>
               <div className="flex flex-col 2xl:-space-y-20 space-y-16">

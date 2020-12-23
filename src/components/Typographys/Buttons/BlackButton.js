@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const BlackButton = ({ text, to }) => {
   return (
     <>
-      <button className="px-8 py-2 rounded-full bg-black hover:bg-white text-white hover:text-black">
+      <button className="lg:px-8 px-4 py-2 lg:text-base text-xs rounded-full bg-black hover:bg-white text-white hover:text-black">
         <Link to={to}>{text}</Link>
       </button>
     </>

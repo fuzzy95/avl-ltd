@@ -1477,6 +1477,16 @@
   resolved "https://registry.yarnpkg.com/@iconify-icons/logos/-/logos-1.1.1.tgz#7b3561bb56ffe5fc4aa83c2e1e734ed79301ce9b"
   integrity sha512-l45CDugqyc1RSHCbNofTkDOquMwZi2ywTeIKaDrm9Ie2TgOr7AYGd4BDZToZn5xXc9URBLGNRAlvOcJVC6L9ug==
 
+"@iconify-icons/maki@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@iconify-icons/maki/-/maki-1.1.0.tgz#2b3bc263eecd22b7200d6331dfd74f1cf78e3653"
+  integrity sha512-8aYtD/AtsU19sbcQQNyd0ta6S9J1oML7/ypL1k5RR5z0ay3ZKNbLTqFMqXFtUJ2MJyD1D8+xbjvfJvnpiQoFWg==
+
+"@iconify-icons/uil@^1.1.1":
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/@iconify-icons/uil/-/uil-1.1.1.tgz#6e7185b73d47eae79f7bf308909e1d59a12a34db"
+  integrity sha512-HdSyOZzEPwh2549jpL2YrLkuR4aYRRF47gDRuZcSRRFdgbkmlpGDSSQ1G1PR9E/a3Igg7j9XdIK9HffTFJP0Lg==
+
 "@iconify/react@^1.1.3":
   version "1.1.3"
   resolved "https://registry.yarnpkg.com/@iconify/react/-/react-1.1.3.tgz#ebe4d3e5f5dea23cd6a9634acd7a0a25c7414a59"

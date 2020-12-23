@@ -3,7 +3,7 @@ import React from "react";
 const PrimaryHeader = ({ text }) => {
   return (
     <>
-      <h1 className="font-normal uppercase font-anton lg:text-6xl text-4xl">
+      <h1 className="font-medium lg:text-left text-center uppercase font-oswald lg:text-6xl text-4xl">
         {text}
       </h1>
     </>

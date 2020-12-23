@@ -14,7 +14,7 @@ const TeamMemberComponents = ({ text, src }) => (
 const TeamMember = () => {
   return (
     <div className="bg-black font-roboto text-white skew mt-24">
-      <div className="container mx-auto px-20 pt-6 pb-16 skewrev">
+      <div className="container mx-auto lg:px-20 px-4 pt-6 pb-16 skewrev">
         <div className="flex flex-col justify-between items-center">
           <div className="w-full py-8 flex flex-col md:items-start items-center">
             <p className="text-white text-lg mb-14 mt-8 lg:w-4/5 w-full md:text-left text-center">
